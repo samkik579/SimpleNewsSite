@@ -15,8 +15,8 @@ document that checks that the username exists in the user.txt file -->
     <form name="input" method="POST" action="adduser.php">
         First Name: <input type="text" name="first_name" />
         Last Name: <input type="text" name="last_name" />
-        Username: <input type="text" name="first_name" />
-        Password: <input type="text" name="last_name" />
+        Username: <input type="text" name="username" />
+        Password: <input type="text" name="pass_word" />
         <input type="submit" value="Submit">
     </form>
 
