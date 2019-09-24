@@ -2,8 +2,14 @@
 session_start();
 require 'database.php';
 
+if (isset($username)){
+    // Username already taken
+    echo "username already exists!";
+    exit; 
+}
+
 if(isset($_POST['submit'])){
-    echo 'hello';
+    //echo 'hello';
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $username = $_POST['username'];
@@ -15,6 +21,8 @@ $_SESSION['pass_word'] =$pass_word;
 $_SESSION['username'] =$username;
 
 $stmt = $mysqli->prepare("insert into users (first_name, last_name, username, pass_word) values (?, ?, ?, ?)");
+
+
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
