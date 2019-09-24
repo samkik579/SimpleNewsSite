@@ -28,7 +28,7 @@ $stmt->execute();
 
 $stmt->close();
 
-header("Location: newsite.html");
+header("Location: addlinks.php");
 exit;
 
 ?>

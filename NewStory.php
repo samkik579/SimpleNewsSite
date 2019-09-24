@@ -15,6 +15,7 @@ document that checks that the username exists in the user.txt file -->
     <form name="input" method="POST" action="addstory.php">
         My Title: <input type="text" name="title" />
         My Story: <input type="text" name="mystory" />
+        My Link: <input type="text" name="mylink" />
         <input type="submit" name="submit" value="Submit">
     </form>
 

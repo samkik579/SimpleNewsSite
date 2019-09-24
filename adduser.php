@@ -2,11 +2,7 @@
 session_start();
 require 'database.php';
 
-if (isset($username)){
-    // Username already taken
-    echo "username already exists!";
-    exit; 
-}
+
 
 if(isset($_POST['submit'])){
     //echo 'hello';
@@ -16,6 +12,7 @@ if(isset($_POST['submit'])){
     $pass_word = $_POST['pass_word'];
     $hashed_password = password_hash($pass_word, PASSWORD_DEFAULT);
 }
+
 
 $_SESSION['pass_word'] =$pass_word;
 $_SESSION['username'] =$username;
