@@ -4,7 +4,7 @@
 require 'database.php';
 
 // Use a prepared statement
-$stmt = $mysqli->prepare("SELECT COUNT(*), id, hashed_password FROM users WHERE username=?");
+$stmt = $mysqli->prepare("SELECT COUNT(*), id, pass_word FROM users WHERE username=?");
 
 // Bind the parameter
 $stmt->bind_param('s', $user);
@@ -23,6 +23,7 @@ if($cnt == 1 && password_verify($pwd_guess, $pwd_hash)){
 	$_SESSION['user_id'] = $user_id;
 	// Redirect to your target page
 } else{
+    //header("Location: login.php");
 	// Login failed; redirect back to the login screen
 }
 ?>

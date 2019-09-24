@@ -31,8 +31,7 @@ $stmt->bind_param('ssss', $first_name, $last_name, $username, $hashed_password);
 
 $stmt->execute();
 
-header("Location: login.php");
-exit;
+header("Location: newsite.html");
 
 $stmt->close();
 
