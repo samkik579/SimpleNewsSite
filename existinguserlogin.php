@@ -12,16 +12,14 @@
 document that checks that the username exists in the user.txt file -->
 
 <body>
-    <form name="input" method="POST" action="adduser.php">
-        First Name: <input type="text" name="first_name" />
-        Last Name: <input type="text" name="last_name" />
+    <form name="input" method="POST" action="login.php">
         Username: <input type="text" name="username" />
         Password: <input type="text" name="pass_word" />
         <input type="submit" value="Submit">
     </form>
+    <input type="button" name="option" value="WHOOPS! I'm not a user!" onclick="document.location.href='NewUser.php'" />
 
-    <input type="button" name="option" value="WHOOPS! I'm a user!"
-        onclick="document.location.href='existinguserlogin.php'" />
+
 
 </body>
 
