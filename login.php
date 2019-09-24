@@ -4,6 +4,7 @@
 require 'database.php';
 session_start();
 
+
 // Use a prepared statement
 $stmt = $mysqli->prepare("SELECT COUNT(*), id, pass_word FROM users WHERE username=?");
 
@@ -23,8 +24,8 @@ $pwd_guess = $_POST['pass_word'];
 
 //$pwd_guess = $_POST['pass_word'];
 // Compare the submitted password to the actual password hash
-echo "$pwd_guess $pwd_hash";
-echo password_verify($pwd_guess, $pwd_hash);
+//echo "$pwd_guess $pwd_hash";
+//echo password_verify($pwd_guess, $pwd_hash);
 
 if($cnt == 1 && password_verify($pwd_guess, $pwd_hash)){
 	// Login succeeded!
