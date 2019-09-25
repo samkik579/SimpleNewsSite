@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Add User </title>
+
 <?php
 //this allows a new user to make an account
 session_start();
@@ -42,3 +46,5 @@ header("Location: newsite.html");
 exit;
 
 ?>
+
+</html>

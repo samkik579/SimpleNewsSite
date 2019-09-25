@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Add Profile </title>
 <?php
 //this code allows users to add a profile to their account
 session_start();
@@ -41,3 +44,5 @@ header("Location: viewprofile.php");
 exit;
 
 ?>
+
+</html>

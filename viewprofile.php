@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title> View Profile </title>
+
 <?php
 //this allows users to view their own profile
 require 'database.php';
@@ -50,3 +55,5 @@ echo " <form action ='createuserprofile.php' method = 'POST'>
 
 $stmt->close();
 ?>
+
+</html>

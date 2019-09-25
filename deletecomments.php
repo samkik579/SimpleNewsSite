@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Delete Comments</title>
+
+
 <?php
 //allows user to delete comments
 require 'database.php';
@@ -16,3 +21,5 @@ echo "File Deleted";
 exit;
 
 ?>
+
+</html>

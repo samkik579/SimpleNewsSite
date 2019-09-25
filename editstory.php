@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Edit Story</title>
+
 <?php
 require 'database.php';
 session_start(); 
@@ -7,9 +11,6 @@ $story = $_POST['story'];
 $link = $_POST['link'];
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <h2>Update Record </h2>
 <form action='finalizestoryedits.php' method='POST'>

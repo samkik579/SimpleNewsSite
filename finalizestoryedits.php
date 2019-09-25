@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Finalize story edit </title>
+
 <?php
 require 'database.php';
 //this finalizes the edits to a story that a user does
@@ -21,3 +25,5 @@ echo "File Edited";
 
 exit;
 ?>
+
+</html>

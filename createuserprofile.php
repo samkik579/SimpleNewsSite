@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
+<title>Create User Profile</title>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 </head>
 
 <!-- allows you to put in a your profile info and then submit and code takes you to the php

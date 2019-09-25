@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title> View Story </title>
+
 <?php
 //this allows users to view a story
 require 'database.php';
@@ -51,3 +56,5 @@ echo "</ul>\n";
 
 $stmt->close();
 ?>
+
+</html>

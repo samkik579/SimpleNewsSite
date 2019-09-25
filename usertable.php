@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title> UserTable Creation </title>
+
 <?php
 require 'database.php';
 
@@ -10,3 +15,5 @@ pass_word VARCHAR(30) not null,
 primary key (id))";
 
 ?>
+
+</html>

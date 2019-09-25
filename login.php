@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Login </title>
+
 <?php
 // This is a *good* example of how you can implement password-based user authentication in your web application.
 
@@ -45,6 +49,6 @@ if($cnt == 1 && password_verify($pwd_guess, $pwd_hash)){
 }
 
 
-
-
 ?>
+
+</html>

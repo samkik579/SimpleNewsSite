@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Delete Story</title>
+
 <?php
 //allows user to delete sotry
 require 'database.php';
@@ -16,3 +20,5 @@ echo "File Deleted";
 exit;
 
 ?>
+
+</html>

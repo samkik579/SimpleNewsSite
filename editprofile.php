@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Edit Profile</title>
+
 <?php
 require 'database.php';
 session_start(); 
@@ -10,8 +14,6 @@ $image = $_POST['image'];
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
 <h2>Update Profile </h2>
 <form action='fpe.php' method='POST'>

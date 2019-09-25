@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title> View Story with Comments </title>
+
 <?php
 //this allows users to view a story with comments
 require 'database.php';
@@ -27,3 +32,5 @@ $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
 
     $abc->close();
     ?>
+
+</html>

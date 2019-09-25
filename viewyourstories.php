@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title> View Your Stories </title>
+
 <?php
 //this allows users to view their own posted stories
 require 'database.php';
@@ -51,3 +56,5 @@ $mysqli->query(/* perform transfer */);
 
     $lsm->close();
     ?>
+
+</html>

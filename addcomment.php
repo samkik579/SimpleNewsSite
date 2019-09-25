@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Add Comment </title>
+
 <?php
 //This code allows users to add comments to the stories as long as they are a user and are logged in
 
@@ -38,3 +42,5 @@ header("Location: newsite.html");
 exit;
 
 ?>
+
+</html>
