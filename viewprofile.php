@@ -42,10 +42,10 @@ echo " <form action ='editprofile.php' method = 'POST'>
     <input type = 'hidden' name = 'user_name' value = '".$user_name."'/>
 </form> ";
 
-
 echo " <form action ='createuserprofile.php' method = 'POST'>
  <input type ='submit' value = 'Make a profile'/>
 </form> ";
+
 
 $stmt->close();
 ?>
