@@ -15,6 +15,7 @@ document that checks that the username exists in the user.txt file -->
     <form name="input" method="POST" action="addcomment.php">
         Input title of story you would like to comment on: <input type="text" name="storytitle" />
         My Comment: <input type="text" name="mycomment" />
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
         <input type="submit" name="submit" value="Submit">
     </form>
 

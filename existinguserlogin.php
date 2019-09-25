@@ -16,6 +16,7 @@ document that checks that the username exists in the user.txt file -->
         Username: <input type="text" name="username" />
         Password: <input type="text" name="pass_word" />
         <input type="submit" name="submit" value="Submit">
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
     </form>
     <input type="button" name="option" value="WHOOPS! I'm not a user!" onclick="document.location.href='NewUser.php'" />
 

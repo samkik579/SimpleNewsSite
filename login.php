@@ -4,6 +4,10 @@
 require 'database.php';
 session_start();
 
+if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	die("Request forgery detected");
+} 
+$mysqli->query(/* perform transfer */);
 
 // Use a prepared statement
 $stmt = $mysqli->prepare("SELECT COUNT(*), id, pass_word FROM users WHERE username=?");
@@ -39,6 +43,8 @@ if($cnt == 1 && password_verify($pwd_guess, $pwd_hash)){
 	//header("Location: existinguserlogin.php");
 
 }
+
+
 
 
 ?>

@@ -17,6 +17,7 @@ document that checks that the username exists in the user.txt file -->
         My Story: <input type="text" name="mystory" />
         My Link: <input type="text" name="link" />
         <input type="submit" name="submit" value="Submit">
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
     </form>
 
 </body>

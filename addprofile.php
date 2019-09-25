@@ -7,7 +7,11 @@ if (!isset($_SESSION['username'])){
     echo "sorry! you need to be logged in to post!";
     exit; 
 }
-
+$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	die("Request forgery detected");
+}
+$mysqli->query(/* perform transfer */);
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
     $my_story = $_POST['mystory'];

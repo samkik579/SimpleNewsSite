@@ -32,6 +32,7 @@ $link = $_POST['link'];
     <input type='hidden' name='title' value="<?php echo $title ?>" />
     <input type='hidden' name='story' value="<?php echo $userstories ?> " />
     <input type='hidden' name='link' value="<?php echo $link ?> " />
+    <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
 </form>
 
 </html>

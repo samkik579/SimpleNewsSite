@@ -3,7 +3,7 @@ require 'database.php';
 session_start(); 
 
 $title = $_POST['title'];
-
+$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
     
     $abc = $mysqli->prepare("select comment, user_name from comments where comment_title = '$title'");
     

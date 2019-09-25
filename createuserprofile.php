@@ -19,6 +19,7 @@ document that checks that the username exists in the user.txt file -->
         Fun Fact: <input type="text" name="funfact" />
         About Me: <input type="text" name="summary" />
         Link to Picture: <input type="text" name="image" />
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
         <input type="submit" name="submit" value="Submit">
     </form>
 

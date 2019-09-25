@@ -6,8 +6,11 @@ if (!isset($_SESSION['username'])){
     echo "sorry! you need to be logged in to use this function!";
     exit; 
 }
-
-
+$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	die("Request forgery detected");
+}
+$mysqli->query(/* perform transfer */);
     $user = $_SESSION['username'];
     
     $lsm = $mysqli->prepare("select title, story, link from stories where username = '$user'");

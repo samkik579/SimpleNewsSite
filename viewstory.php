@@ -4,7 +4,11 @@ session_start();
 
 $stmt = $mysqli->prepare("select title, story, username, link from stories order by id");
 
-
+$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	die("Request forgery detected");
+}
+$mysqli->query(/* perform transfer */);
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;

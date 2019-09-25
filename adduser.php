@@ -2,8 +2,12 @@
 session_start();
 require 'database.php';
 
-
-
+$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	die("Request forgery detected");
+}
+$mysqli->query(/* perform transfer */);
+    
 if(isset($_POST['submit'])){
     //echo 'hello';
     $first_name = $_POST['first_name'];

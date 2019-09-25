@@ -19,6 +19,7 @@ $comment = $_POST['comment'];
     <tr>
         <td><INPUT TYPE="Submit" VALUE="Update the Comment" NAME="Submit"></td>
     </tr>
+    <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
     <input type='hidden' name='comment' value="<?php echo $comment ?>" />
 </form>
 
