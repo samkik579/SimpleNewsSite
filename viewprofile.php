@@ -3,7 +3,7 @@ require 'database.php';
 session_start(); 
 $user = $_SESSION['username'];
 
-$stmt = $mysqli->prepare("select name, birthday, hometown, funfact, summary, image from profile where user_name = $user");
+$stmt = $mysqli->prepare("select name, birthday, hometown, summary, image from profile where user_name = '$user'");
 
 
 if(!$stmt){
@@ -13,7 +13,7 @@ if(!$stmt){
 
 $stmt->execute();
 
-$stmt->bind_result($name, $birthday, $hometown, $funfact, $summary, $image);
+$stmt->bind_result($name, $birthday, $hometown, $summary, $image);
 
 //$stmt-> bind_result($link);
 
@@ -26,8 +26,6 @@ while ($stmt->fetch()){
         echo $birthday; 
         echo "<br><br>";
         echo $hometown; 
-        echo "<br><br>";
-        echo $funfact; 
         echo "<br><br>";
         echo $summary; 
         echo "<br><br>";

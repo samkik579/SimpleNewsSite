@@ -9,22 +9,22 @@ if (!isset($_SESSION['username'])){
 }
 
 if(isset($_POST['submit'])){
+    echo "hello";
     $name = $_POST['name'];
     $birthday = $_POST['birthday'];
     $hometown = $_POST['hometown'];
-    $funfact = $_POST['funfact'];
     $summary = $_POST['summary'];
     $image = $_POST['image'];
 }
 
-$stmt = $mysqli->prepare("insert into profile (name, birthday, hometown, funfact, summary, image) values (?, ?, ?, ?, ?, ?) ");
+$stmt = $mysqli->prepare("insert into profile (name, birthday, hometown, summary, image, user_name) values (?, ?, ?, ?, ?, ?) ");
 
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
 }
 
-$stmt->bind_param('sssssss', $name, $birthday, $hometown, $funfact, $summary, $image, $_SESSION['username']);
+$stmt->bind_param('ssssss', $name, $birthday, $hometown, $summary, $image, $_SESSION['username']);
 
 
 

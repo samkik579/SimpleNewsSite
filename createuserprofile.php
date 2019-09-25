@@ -16,7 +16,6 @@ document that checks that the username exists in the user.txt file -->
         My Name: <input type="text" name="name" />
         My Birthday: <input type="text" name="birthday" />
         My Hometown: <input type="text" name="hometown" />
-        Fun Fact: <input type="text" name="funfact" />
         About Me: <input type="text" name="summary" />
         Link to Picture: <input type="text" name="image" />
         <input type="submit" name="submit" value="Submit">
