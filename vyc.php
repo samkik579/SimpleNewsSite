@@ -33,6 +33,11 @@ if (!isset($_SESSION['username'])){
     <input type ='submit' value = 'Delete'/>
     <input type = 'hidden' name = 'comment' value = '".$comment."'/>
       </form> ";
+
+       echo " <form action ='editcomment.php' method = 'POST'>
+    <input type ='submit' value = 'Edit'/>
+    <input type = 'hidden' name = 'comment' value = '".$comment."'/>
+      </form> ";
     }
 
 

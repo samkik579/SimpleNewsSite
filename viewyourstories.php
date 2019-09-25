@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])){
 
     $user = $_SESSION['username'];
     
-    $lsm = $mysqli->prepare("select title, story from stories where username = '$user'");
+    $lsm = $mysqli->prepare("select title, story, link from stories where username = '$user'");
     
 
     if(!$lsm){
@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])){
 }
     $lsm->execute(); 
 
-    $lsm->bind_result($title, $userstories);
+    $lsm->bind_result($title, $userstories, $link);
     echo "ALL MY STORIES";
     echo "<br><br>";
     while ($lsm->fetch()){
@@ -27,11 +27,20 @@ if (!isset($_SESSION['username'])){
         echo "<br><br>";
         echo $userstories; 
         echo "<br><br>";
+        echo $link; 
+        echo "<br><br>";
 
     
     echo " <form action ='deletestory.php' method = 'POST'>
     <input type ='submit' value = 'Delete'/>
     <input type = 'hidden' name = 'title' value = '".$title."'/>
+      </form> ";
+
+     echo " <form action ='editstory.php' method = 'POST'>
+    <input type ='submit' value = 'Edit'/>
+    <input type = 'hidden' name = 'title' value = '".$title."'/>
+    <input type = 'hidden' name = 'story' value = '".$userstories."'/>
+      <input type = 'hidden' name = 'link' value = '".$link."'/>
       </form> ";
     }
 
