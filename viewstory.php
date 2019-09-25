@@ -2,7 +2,7 @@
 require 'database.php';
 session_start(); 
 
-$stmt = $mysqli->prepare("select title, story from stories order by id");
+$stmt = $mysqli->prepare("select title, story, link from stories order by id");
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
@@ -10,17 +10,21 @@ if(!$stmt){
 
 $stmt->execute();
 
-$stmt->bind_result($title, $story);
+$stmt->bind_result($title, $story, $link);
+//$stmt-> bind_result($link);
 
-echo "TITLE \t STORY";
+echo "STORIES";
 
-echo "\n";
+echo "<br><br>";
 while($stmt->fetch()){
-    printf("\t<li>%s %s</li>\n",
-        htmlspecialchars($title),
-        htmlspecialchars($story)
-        
-	);
+    echo $title; 
+    echo "<br>";
+    echo $story; 
+    echo "<br>";
+    echo $link;
+    echo "<a href ='".$link."'>LINK</a>"; 
+    echo "<br><br>";
+
 }
 echo "</ul>\n";
 
