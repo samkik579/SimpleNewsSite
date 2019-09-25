@@ -23,7 +23,6 @@ if(!$stmt){
 $stmt->bind_param('sss', $commenttitle, $my_comment, $_SESSION['username']);
 
 
-
 $stmt->execute();
 
 $stmt->close();

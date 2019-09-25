@@ -12,10 +12,9 @@
 document that checks that the username exists in the user.txt file -->
 
 <body>
-    <form name="input" method="POST" action="addstory.php">
-        My Title: <input type="text" name="title" />
-        My Story: <input type="text" name="mystory" />
-        My Link: <input type="text" name="link" />
+    <form name="input" method="POST" action="addcomment.php">
+        Input title of story you would like to comment on: <input type="text" name="storytitle" />
+        My Comment: <input type="text" name="mycomment" />
         <input type="submit" name="submit" value="Submit">
     </form>
 
