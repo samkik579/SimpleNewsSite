@@ -29,7 +29,7 @@ $stmt->execute();
 
 $stmt->close();
 
-header("Location: viewstory.php");
+header("Location: newsite.html");
 exit;
 
 ?>

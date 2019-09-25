@@ -2,7 +2,7 @@
 require 'database.php';
 session_start(); 
 
-$stmt = $mysqli->prepare("select title, story, link from stories order by id");
+$stmt = $mysqli->prepare("select title, story, username, link from stories order by id");
 
 
 if(!$stmt){
@@ -12,7 +12,7 @@ if(!$stmt){
 
 $stmt->execute();
 
-$stmt->bind_result($title, $story, $link);
+$stmt->bind_result($title, $story, $username, $link);
 
 //$stmt-> bind_result($link);
 
@@ -20,11 +20,17 @@ echo "STORIES";
 
 echo "<br><br>";
 while($stmt->fetch()){
+    echo "This story is by:     ";
+    echo $username;
+    echo "<br>";
+    echo "The title is:        ";
     echo $title; 
-    echo "<br>";
+    echo "<br><br>";
     echo $story; 
+    echo "<br><br>";
+    echo "If you would like to learn more please click the following link:";
     echo "<br>";
-    echo $link;
+    //echo $link;
     echo "<a href ='".$link."'>LINK</a>"; 
     echo "<br>";
 
@@ -33,6 +39,7 @@ while($stmt->fetch()){
       <input type = 'hidden' name = 'title' value = '".$title."'/>
       </form> ";
       
+    echo "<br><br>";
 
 }
 echo "</ul>\n";
