@@ -35,7 +35,7 @@ while($stmt->fetch()){
     echo "<br>";
 
     echo " <form action ='viewstorywithcomments.php' method = 'POST'>
-     <input type ='submit' value = 'Submit'/>
+     <input type ='submit' value = 'Click here to see all comments'/>
       <input type = 'hidden' name = 'title' value = '".$title."'/>
       </form> ";
       

@@ -10,7 +10,7 @@ $comment = $_POST['comment'];
 <html lang="en">
 
 <h2>Update Record </h2>
-<form action='finalizecommentedits.php' method='POST'>
+<form action='fce.php' method='POST'>
 
     <tr>
         <td>Comment:</td>
