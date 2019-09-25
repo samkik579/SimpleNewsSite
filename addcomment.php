@@ -9,18 +9,18 @@ if (!isset($_SESSION['username'])){
 }
 
 if(isset($_POST['submit'])){
-    $commenttitle = $_POST['title'];
     $my_comment = $_POST['mycomment'];
+    $story_title = $_POST['storytitle'];
 }
 
-$stmt = $mysqli->prepare("insert into comments (title, mycomment, user_name) values (?, ?, ?) ");
+$stmt = $mysqli->prepare("insert into comments (comment, user_name, comment_title) values (?, ?, ?) ");
 
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
 }
 
-$stmt->bind_param('sss', $commenttitle, $my_comment, $_SESSION['username']);
+$stmt->bind_param('sss', $my_comment, $_SESSION['username'], $story_title);
 
 
 $stmt->execute();

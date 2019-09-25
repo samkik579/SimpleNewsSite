@@ -29,7 +29,7 @@ $stmt->execute();
 
 $stmt->close();
 
-header("Location: addlinks.php");
+header("Location: viewstory.php");
 exit;
 
 ?>
