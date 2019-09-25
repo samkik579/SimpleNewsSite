@@ -18,18 +18,20 @@ if (!isset($_SESSION['username'])){
     $lsm->execute(); 
 
     $lsm->bind_result($comment, $story_title);
-    echo "ALL MY STORIES";
+    echo "ALL MY COMMENTS";
     echo "<br><br>";
     while ($lsm->fetch()){
+        echo "Story title :     ";
         echo $story_title;
         echo "<br><br>";
+        echo "My comment:     ";
         echo $comment; 
         echo "<br><br>";
 
     
     echo " <form action ='deletecomments.php' method = 'POST'>
     <input type ='submit' value = 'Delete'/>
-    <input type = 'hidden' name = 'title' value = '".$comment."'/>
+    <input type = 'hidden' name = 'comment' value = '".$comment."'/>
       </form> ";
     }
 
