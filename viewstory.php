@@ -3,6 +3,8 @@ require 'database.php';
 session_start(); 
 
 $stmt = $mysqli->prepare("select title, story, link from stories order by id");
+
+
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
@@ -11,6 +13,7 @@ if(!$stmt){
 $stmt->execute();
 
 $stmt->bind_result($title, $story, $link);
+
 //$stmt-> bind_result($link);
 
 echo "STORIES";
@@ -23,7 +26,13 @@ while($stmt->fetch()){
     echo "<br>";
     echo $link;
     echo "<a href ='".$link."'>LINK</a>"; 
-    echo "<br><br>";
+    echo "<br>";
+
+    echo " <form action ='viewstorywithcomments.php' method = 'POST'>
+     <input type ='submit' value = 'Submit'/>
+      <input type = 'hidden' name = 'title' value = '".$title."'/>
+      </form> ";
+      
 
 }
 echo "</ul>\n";
