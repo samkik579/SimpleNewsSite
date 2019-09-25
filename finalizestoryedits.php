@@ -1,5 +1,6 @@
 <?php
 require 'database.php';
+//this finalizes the edits to a story that a user does
 session_start(); 
     $updatetitle = $_POST['updatetitle'];
     $updatestory = $_POST['updatestory'];

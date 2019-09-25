@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
 
-<!-- allows you to put in a username and then submit and code takes you to the php
-document that checks that the username exists in the user.txt file -->
+<!-- allows you to put in a new story-->
 
 <body>
     <form name="input" method="POST" action="addstory.php">

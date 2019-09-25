@@ -1,4 +1,5 @@
 <?php
+//this allows users to view their own posted stories
 require 'database.php';
 session_start(); 
 

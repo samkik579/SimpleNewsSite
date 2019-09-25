@@ -1,4 +1,5 @@
 <?php
+//allows user to delete sotry
 require 'database.php';
 session_start(); 
 

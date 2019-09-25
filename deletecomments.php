@@ -1,4 +1,5 @@
 <?php
+//allows user to delete comments
 require 'database.php';
 session_start(); 
 

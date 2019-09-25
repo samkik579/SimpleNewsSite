@@ -1,4 +1,5 @@
 <?php
+//this allows a new user to make an account
 session_start();
 require 'database.php';
 

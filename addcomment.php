@@ -1,4 +1,6 @@
 <?php
+//This code allows users to add comments to the stories as long as they are a user and are logged in
+
 session_start();
 require 'database.php';
 

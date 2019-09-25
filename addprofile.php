@@ -1,4 +1,5 @@
 <?php
+//this code allows users to add a profile to their account
 session_start();
 require 'database.php';
 
@@ -13,19 +14,22 @@ if(!hash_equals($_SESSION['token'], $_POST['token'])){
 }
 $mysqli->query(/* perform transfer */);
 if(isset($_POST['submit'])){
-    $title = $_POST['title'];
-    $my_story = $_POST['mystory'];
-    $links = $_POST['link'];
+    echo "hello";
+    $name = $_POST['name'];
+    $birthday = $_POST['birthday'];
+    $hometown = $_POST['hometown'];
+    $summary = $_POST['summary'];
+    $image = $_POST['image'];
 }
 
-$stmt = $mysqli->prepare("insert into stories (title, story, username, link) values (?, ?, ?, ?) ");
+$stmt = $mysqli->prepare("insert into profile (name, birthday, hometown, summary, image, user_name) values (?, ?, ?, ?, ?, ?) ");
 
 if(!$stmt){
 	printf("Query Prep Failed: %s\n", $mysqli->error);
 	exit;
 }
 
-$stmt->bind_param('ssss', $title, $my_story, $_SESSION['username'], $links);
+$stmt->bind_param('ssssss', $name, $birthday, $hometown, $summary, $image, $_SESSION['username']);
 
 
 
@@ -33,7 +37,7 @@ $stmt->execute();
 
 $stmt->close();
 
-header("Location: newsite.html");
+header("Location: viewprofile.php");
 exit;
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+//this allows users to view a story with comments
 require 'database.php';
 session_start(); 
 

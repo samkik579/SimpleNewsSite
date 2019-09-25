@@ -1,7 +1,7 @@
 <?php
 require 'database.php';
 session_start(); 
-
+//allows used to edit a sotry they posted
 $title = $_POST['title'];
 $story = $_POST['story'];
 $link = $_POST['link'];

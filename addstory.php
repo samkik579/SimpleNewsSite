@@ -1,4 +1,5 @@
 <?php
+//this allows users to add a sotry to the database
 session_start();
 require 'database.php';
 
